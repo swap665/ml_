@@ -324,4 +324,178 @@ plt.legend([
     "Validation"
 ])
 
+Traditional ML algorithms such as Logistic Regression and Random Forest cannot efficiently capture spatial image information.
+
+Classification Report Interpretation
+High Precision
+
+When the model predicts:
+
+Watch
+
+it is usually correct.
+
+High Recall
+
+Most actual watches, shirts, and shoes were successfully detected.
+
+Strong F1 Score
+
+Balanced performance between precision and recall.
+
+Business Interpretation Report
+Business Problem Solved
+
+The retailer wanted to automate product catalog management for millions of images uploaded by vendors.
+
+Manual tagging is:
+
+Time consuming
+Expensive
+Error prone
+
+The AI system automatically classifies products into categories.
+
+Key Insights
+Insight 1
+
+Product shape is the strongest classification factor.
+
+Examples:
+
+Watch
+Shoe
+Handbag
+
+have unique visual structures.
+
+Insight 2
+
+Visually similar products create most errors.
+
+Examples:
+
+Shirts vs Tshirts
+Casual Shoes vs Sports Shoes
+Insight 3
+
+CNN successfully learns product-specific patterns.
+
+Examples:
+
+Collars
+Sleeves
+Watch dials
+Shoe soles
+Insight 4
+
+Catalog automation can significantly reduce manual effort.
+
+Instead of employees tagging products manually, the model performs automatic classification
+Risk 1: Poor Image Quality
+
+Problem:
+
+Blurred Images
+Low Resolution
+
+Impact:
+
+Incorrect predictions.
+
+Mitigation:
+
+Image quality validation before classification.
+
+Risk 2: New Product Categories
+
+Example:
+
+Smart Glasses
+AR Wearables
+
+Not present in training data.
+
+Mitigation:
+
+Periodic model retraining.
+
+Risk 3: Class Imbalance
+
+Some categories may have fewer examples.
+
+Mitigation:
+
+Data augmentation.
+
+Risk 4: Vendor Upload Errors
+
+Example:
+
+Watch image uploaded under Shoe category
+
+Mitigation:
+
+Human review for low-confidence predictions.
+
+Decision Making Summary
+1. What Business Problem Was Solved?
+
+An automated catalog classification system was developed to categorize fashion products from vendor-uploaded images.
+
+This reduces manual tagging effort and accelerates product onboarding.
+
+2. Which Variables Influenced Outcome Most?
+
+For image classification, important visual features include:
+
+Product shape
+Color distribution
+Texture
+Patterns
+Design structure
+
+Examples:
+
+Collar → Shirt
+Dial → Watch
+Sole → Shoe
+3. What Insights Were Discovered?
+CNN significantly outperforms traditional machine learning models.
+Product structure is the strongest predictor.
+Most errors occur between visually similar apparel categories.
+Automated classification is feasible with high accuracy.
+4. What Risks Exist?
+Low-quality images
+New unseen categories
+Class imbalance
+Incorrect vendor uploads
+Final Recommendation to Management
+Recommended Solution
+
+Deploy a CNN-based product classification system as part of the catalog management pipeline.
+
+Proposed Workflow
+Vendor Upload
+      ↓
+Image Validation
+      ↓
+CNN Classification
+      ↓
+Category Assignment
+      ↓
+Catalog Creation
+      ↓
+Website Publication
+Expected Business Benefits
+Business Metric	Expected Impact
+Manual Tagging Cost	↓ 70–90%
+Product Onboarding Time	↓ 80%
+Catalog Accuracy	↑ Significant
+Vendor Processing Speed	↑ 5–10x
+Search Experience	↑ Better Product Discovery
+Executive Summary (Viva Answer)
+
+A Convolutional Neural Network (CNN) was developed to automate fashion catalog management by classifying product images into predefined categories. The model achieved approximately 90% accuracy and successfully learned visual features such as shape, texture, and design patterns. The solution reduces manual catalog tagging, improves product onboarding speed, and enhances catalog consistency. The recommended deployment strategy includes automated classification, image quality validation, periodic retraining, and human review for low-confidence predictions. This system can significantly reduce operational costs while improving customer search and discovery experiences.
+
 plt.show()
